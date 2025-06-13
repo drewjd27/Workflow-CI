@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/88e450b775194055b21044347a765372/artifacts
+end_time: 1749823566656
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 88e450b775194055b21044347a765372
+run_name: gifted-sloth-341
+run_uuid: 88e450b775194055b21044347a765372
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749823556253
+status: 3
+tags: []
+user_id: runner
