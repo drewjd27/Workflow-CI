@@ -62,21 +62,21 @@ jobs:
         git commit -m "Upload MLflow artifacts from CI run ${{ github.run_number }}" || echo "No changes to commit"
         git push origin main
 
-    - name: Build Docker Model
+    - name: Build Docker Model with MLflow
       run: |
         RUN_ID=$(ls MLProject/artifacts/mlruns/0 | head -n 1)
         MODEL_PATH=MLProject/artifacts/mlruns/0/$RUN_ID/artifacts/model
         echo "Model path: $MODEL_PATH"
-        mlflow models build-docker -m $MODEL_PATH -n mlflow-penguins:${{ github.run_number }}
+        mlflow models build-docker -m $MODEL_PATH -n ${{ secrets.DOCKER_USERNAME }}/mlflow-penguins:${{ github.run_number }}
 
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-    - name: Tag Docker Image
+    - name: Tag Docker Image as latest
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/mlflow-penguins:${{ github.run_number }} ${{ secrets.DOCKER_USERNAME }}/mlflow-penguins:latest
 
-    - name: Push Docker Image
+    - name: Push Docker Image to Docker Hub
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/mlflow-penguins:${{ github.run_number }}
         docker push ${{ secrets.DOCKER_USERNAME }}/mlflow-penguins:latest
