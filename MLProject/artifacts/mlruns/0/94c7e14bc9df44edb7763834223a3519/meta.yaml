@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/94c7e14bc9df44edb7763834223a3519/artifacts
+end_time: 1749825108708
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 94c7e14bc9df44edb7763834223a3519
+run_name: able-fly-664
+run_uuid: 94c7e14bc9df44edb7763834223a3519
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749825097654
+status: 3
+tags: []
+user_id: runner
