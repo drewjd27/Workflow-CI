@@ -53,7 +53,7 @@ jobs:
     - name: Upload to Github
       run: |
         mkdir -p MLProject/artifacts
-        cp -r ./MLProject/mlruns MLProject/artifacts/
+        cp -r ./mlruns MLProject/artifacts/
         git config --global user.name ${{ secrets.HG_USERNAME }}
         git config --global user.email ${{ secrets.HG_EMAIL }}
         git add MLProject/artifacts/
