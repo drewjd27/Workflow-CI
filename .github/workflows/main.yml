@@ -40,8 +40,7 @@ jobs:
 
     - name: Run mlflow project
       run: |
-        export MLFLOW_TRACKING_URI=http://127.0.0.1:5000/
-        mlflow run MLProject/
+        mlflow run MLProject --env-manager=local
 
     - name: Get latest MLflow run_id
       id: get_run_id
