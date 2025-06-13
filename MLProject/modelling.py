@@ -6,7 +6,6 @@ from sklearn.metrics import classification_report, accuracy_score
 
 def main():
 
-    mlflow.set_experiment("modelling-Andrew")
     mlflow.sklearn.autolog()
 
     train_df = pd.read_csv('penguins_train_preprocessing.csv')
