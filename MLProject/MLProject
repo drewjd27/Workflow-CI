@@ -1,4 +1,4 @@
-name: penguins-mlflow
+name: penguins-rf-project
 
 conda_env: conda.yaml
 
