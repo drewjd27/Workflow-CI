@@ -1,0 +1,15 @@
+digest: 8bd0fab8
+name: dataset
+profile: '{"num_rows": 67, "num_elements": 804}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "island_Biscoe", "required":
+  true}, {"type": "double", "name": "island_Dream", "required": true}, {"type": "double",
+  "name": "island_Torgersen", "required": true}, {"type": "double", "name": "sex_female",
+  "required": true}, {"type": "double", "name": "sex_male", "required": true}, {"type":
+  "double", "name": "year_2007", "required": true}, {"type": "double", "name": "year_2008",
+  "required": true}, {"type": "double", "name": "year_2009", "required": true}, {"type":
+  "double", "name": "bill_length_mm", "required": true}, {"type": "double", "name":
+  "bill_depth_mm", "required": true}, {"type": "double", "name": "flipper_length_mm",
+  "required": true}, {"type": "double", "name": "body_mass_g", "required": true}]}'
+source: '{"tags": {"mlflow.user": "runner", "mlflow.source.name": "modelling.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "83f00c53404f78ceb87267c2a08e8eaadd273a35"}}'
+source_type: code
