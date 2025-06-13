@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/6e9b7de30f6c4d68bc017c012371fabf/artifacts
+end_time: 1749823232973
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6e9b7de30f6c4d68bc017c012371fabf
+run_name: capable-shrike-845
+run_uuid: 6e9b7de30f6c4d68bc017c012371fabf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749823221427
+status: 3
+tags: []
+user_id: runner
