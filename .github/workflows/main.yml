@@ -6,7 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-
 env:
   CSV_TRAIN_URL: MLProject/penguins_train_preprocessing.csv
   CSV_TEST_URL: MLProject/penguins_test_preprocessing.csv
@@ -46,7 +45,8 @@ jobs:
     - name: Get latest MLflow run_id
       id: get_run_id
       run: |
-        echo "RUN_ID=$(mlflow experiments list | grep modelling-Andrew | awk '{print $1}' | head -n 1)" >> $GITHUB_ENV
+        RUN_ID=$(ls -t mlruns/0 | head -n 1)
+        echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
 
     - name: Install Python dependencies
       run: pip install requests
@@ -61,9 +61,11 @@ jobs:
         git commit -m "Upload MLflow artifacts from CI run ${{ github.run_number }}" || echo "No changes to commit"
         git push origin main
 
-    - name: Build Docker Model
+    - name: Build Docker Model with MLflow
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/mlflow-penguins:${{ github.run_number }} .
+        mlflow models build-docker \
+          -m mlruns/0/${{ steps.get_run_id.outputs.run_id }}/artifacts/model \
+          -n ${{ secrets.DOCKER_USERNAME }}/mlflow-penguins:${{ github.run_number }}
 
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
