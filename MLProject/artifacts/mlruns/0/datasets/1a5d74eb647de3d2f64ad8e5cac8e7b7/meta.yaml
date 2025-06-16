@@ -11,5 +11,5 @@ schema: '{"mlflow_colspec": [{"type": "double", "name": "island_Biscoe", "requir
   "bill_depth_mm", "required": true}, {"type": "double", "name": "flipper_length_mm",
   "required": true}, {"type": "double", "name": "body_mass_g", "required": true}]}'
 source: '{"tags": {"mlflow.user": "runner", "mlflow.source.name": "modelling.py",
-  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "4b22426e2b9d42844934cb349635d1176778299b"}}'
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "2df1be2cd5dbdfe57c4b0ff46c49989659257c39"}}'
 source_type: code

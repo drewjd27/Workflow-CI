@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/bbc4ac2c01ee493d921e7adde4df800e/artifacts
+end_time: 1750118389420
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bbc4ac2c01ee493d921e7adde4df800e
+run_name: charming-skink-185
+run_uuid: bbc4ac2c01ee493d921e7adde4df800e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750118377459
+status: 3
+tags: []
+user_id: runner
